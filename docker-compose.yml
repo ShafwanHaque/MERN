@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  server:
+    build: ./backend
+    container_name: mern-server
+    ports:
+      - "5001:5001"
+    networks:
+      - fullstack-network
+    restart: unless-stopped
+  client:
+    build: ./frontend
+    container_name: mern-client
+    ports:
+      - "5000:5000"
+    networks:
+      - fullstack-network
+    depends_on:
+      - server
+    restart: unless-stopped
+
+networks:
+  fullstack-network:
+    driver: bridge
