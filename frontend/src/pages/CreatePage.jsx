@@ -19,7 +19,7 @@ const CreatePage = () => {
     setIsLoading(true);
 
     try {
-      await axios.post("http://localhost:5001/api/notes", { title, content });
+      await axios.post("http://192.168.68.123:5001/api/notes", { title, content });
       toast.success("Note Created Successfully!");
       navigator("/");
       // setIsLoading(false);

@@ -17,6 +17,8 @@ app.use(
       "http://localhost:5172",
       "http://localhost:5173",
       "http://localhost:5000",
+      "http://192.168.68.123:5000",
+      "https://prefix-arrives-beauty-southampton.trycloudflare.com" // Removed the trailing slash
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
